@@ -1,0 +1,10 @@
+{%extends 'flights/base.html'%}
+{%block title%}FLIGHTS{%endblock%}
+{%block body%}
+    <h1>FLIGHTS</h1>
+    <ul>
+      {%for flight in flights%}
+          <li><a href="{%url 'flight' flight.id%}">{{flight}}<a></li>
+      {%endfor%}
+    </ul>
+{%endblock%}
